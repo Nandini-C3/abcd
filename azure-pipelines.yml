@@ -1,0 +1,17 @@
+import json
+
+def lambda_handler(event, context):
+    print(event)
+    # TODO implement
+    content = "<p>Hello world from Lamda!</p>"
+    response = { 
+        "statusCode": 200,
+        "statusDescription":  "200 OK",
+        "isBase64Encoded": False,
+        "headers": {
+            'Content-Type': 'text/html',
+        },
+        "body": content
+    }
+    
+    return response
